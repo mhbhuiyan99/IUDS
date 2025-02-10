@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -117,7 +117,7 @@ namespace IUDS
                 String d = dept;
                 genderCheck();
                 String e = gender;
-                SqlCommand command = new SqlCommand("update IUDS set ID ='" + a + "',Namee='" + b + "',Age='" + c + "',Dept='" + d + "',Gender='" + e + "')", connection);
+                SqlCommand command = new SqlCommand("update IUDS set ID ='" + a + "',Namee='" + b + "',Age='" + c + "',Dept='" + d + "',Gender='" + e + "' where ID = '" + a + "'", connection);
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
